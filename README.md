@@ -64,4 +64,26 @@ El **crecimiento de recursos** importa.
 
 🚗 Ok, ¿Cómo sabemos cuando un coche es más rápido que otro? Bueno, si los ponemos en un tramo igual, y tomamos nuestros relojes para medir cuánto tardan, podremos ver que uno llega más rápido que otro a la meta 🏁. Que un coche tarda menos que otro. Tal vez unos 10, o 20, o 30 minutos.
 
-Entonces, medir es clave para determinar el mejor. Pero la Complejidad en sí no trata de si un coche llega 10, o 20 o 30 minutos más rápido a la meta. Si no del ritmo con el que aumenta. Esto lo veremos en todo el módulo de Complejidad 
+Entonces, medir es clave para determinar el mejor. Pero la Complejidad en sí no trata de si un coche llega 10, o 20 o 30 minutos más rápido a la meta. Si no del ritmo con el que aumenta. Esto lo veremos en todo el módulo de Complejidad.
+
+## Complejidad temporal
+
+La complejidad temporal es la tasa de crecimiento del tiempo de ejecución del algoritmo en relación con el crecimiento de la entrada de datos del algoritmo.
+
+Para obtenerla se mide el tiempo de ejecucion del algoritmo en varios casos, cada caso con una mayor informacion de entrada que el anterior.
+
+Se mide cuanto tiempo toma en ejecutarse el algoritmo conforme aumenta la entrada de datos. ya que buscamos medir el ritmo con el que aumenta el tiempo de ejecucion conforme aumente la entrada de datos.
+
+## Complejidad temporal en práctica
+
+En javascript tenemos la **Interfaz performance**
+
+El método **performance.now()** nos ayuda a **medir el tiempo** entre dos líneas de código en **milisegundos**
+
+Existe otro método: **console.time()**, pero no es tan preciso como **performance.now()**
+
+📈👉 [Herramienta de Visualización de Complejidad Temporal](https://radiant-anchorage-11930.herokuapp.com/)
+
+https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_now
+
+https://w3c.github.io/hr-time/#dom-performance-now
