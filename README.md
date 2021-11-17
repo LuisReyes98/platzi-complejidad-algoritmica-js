@@ -74,6 +74,22 @@ Para obtenerla se mide el tiempo de ejecucion del algoritmo en varios casos, cad
 
 Se mide cuanto tiempo toma en ejecutarse el algoritmo conforme aumenta la entrada de datos. ya que buscamos medir el ritmo con el que aumenta el tiempo de ejecucion conforme aumente la entrada de datos.
 
+Ejemplo dos algoritmos:
+
+**El algoritmo A** le toma realizar la operacion
+10 segundos con 10 datos
+20 segundos con 20 datos
+30 segundos con 30 datos
+40 segundos con 40 datos
+
+**El algoritmo B** le toma realizar la operacion
+20 segundos con 10 datos
+20 segundos con 20 datos
+20 segundos con 30 datos
+20 segundos con 40 datos
+
+En este caso podemos ver que el algoritmo **B** tiene una mejor complejidad temporal ya que su tiempo de ejecucion se mantiene en el tiempo mientras que el algoritmo **A** tiene una taza de crecimiento lineal.
+
 ## Complejidad temporal en práctica
 
 En javascript tenemos la **Interfaz performance**
@@ -84,6 +100,47 @@ Existe otro método: **console.time()**, pero no es tan preciso como **performan
 
 📈👉 [Herramienta de Visualización de Complejidad Temporal](https://radiant-anchorage-11930.herokuapp.com/)
 
-https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_now
+[perf_hooks.html#perf_hooks_performance_now](https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_now)
 
-https://w3c.github.io/hr-time/#dom-performance-now
+[hr-time/#dom-performance-now](https://w3c.github.io/hr-time/#dom-performance-now)
+
+## Complejidad espacial
+
+Ejemplo buscando un algoritmo que ocupe poco espacio Teniendo multiples algoritmos:
+
+**El algoritmo Vision** realiza la operación
+
+Con 10 datos la realiza ocupando 10 Kilobytes
+Con 20 datos la realiza ocupando 20 Kilobytes
+Con 30 datos la realiza ocupando 30 Kilobytes
+
+**El algoritmo Nova** realiza la operación
+
+Con 10 datos la realiza ocupando 10 Kilobytes
+Con 20 datos la realiza ocupando 100 Kilobytes
+Con 30 datos la realiza ocupando 1000 Kilobytes
+
+### Memoria
+
+cuando trabajamos con grandes cantidades de datos tendremos que almacenar información en otras partes
+
+### Espacio auxiliar
+
+La complejidad espacial el **espacio auxiliar** y el espacio ocupado por los datos de entrada
+
+es más importante que el espacio de entrada, ya que el espacio auxiliar es generado por las operaciones internas que realice nuestro algoritmo. Todos los algoritmos ocupan el mismo tamaño en su entrada, pero el espacio auxiliar varía según que lógica apliquemos en el algoritmo.
+
+Por ejemplo, el espacio auxiliar Puede ser generado por algoritmos de ordenamiento al crear nuevas variables. O las técnicas que usemos para resolver el problema, las creaciones de listas y diccionarios en el algoritmo aumentan el espacio auxiliar utilizado por el algoritmo.
+
+## Complejidad espacial en práctica
+
+Una de las particulariadades la complejidad espacial, es que varia el espacio y la forma de medirlo segun el lenguage de programacion, por los interpretes o compiladores utilizados
+
+¿Cómo medimos un recurso?
+⌚ En Complejidad Temporal podemos usar funciones como performance.now y console.time para medir el tiempo en que se ejecuta un algoritmo.
+
+🌌 En Complejidad Espacial es diferente. Cada compilador asigna un espacio distinto de memoria para almacenar números o palabras.
+
+📦 La diversidad de tamaños y formas con las que el compilador almacena información es interesante, pero para el propósito que tenemos, podemos simplificarlo a contar cuántas variables se definen para almacenar arreglos, números o cadenas.
+
+En la complejidad Espacial vamos contando las variables que se van creando y que tipos de variables son las que se están creando.
