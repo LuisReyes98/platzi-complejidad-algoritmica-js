@@ -144,3 +144,22 @@ Una de las particulariadades la complejidad espacial, es que varia el espacio y 
 📦 La diversidad de tamaños y formas con las que el compilador almacena información es interesante, pero para el propósito que tenemos, podemos simplificarlo a contar cuántas variables se definen para almacenar arreglos, números o cadenas.
 
 En la complejidad Espacial vamos contando las variables que se van creando y que tipos de variables son las que se están creando.
+
+## El estado de la Complejidad
+
+### Otras complejidades existen
+
+- Accesos a la memoria
+- Procesos parelelos
+- Comparaciones
+- Entre otras mas
+
+### Complejidad en el futuro
+
+Si descubrimos interesante optimizar el uso de un recurso en computación, allí tendremos un nuevo campo de estudio de complejidad
+
+### ♾ Los recursos que se analizan en Ciencias de la Computación van más allá del tiempo y del espacio. No hay límite
+
+🌀 ¿Necesitas que un algoritmo ejecute pocas funciones? Nueva complejidad. ¿Necesitas que un algoritmo no realice muchos arreglos? Nueva complejidad. ¿Necesitas un algoritmo que utilice la menor cantidad de otros algoritmos? Nueva complejidad.
+
+🚀 ¿Sabes qué es lo más genial? Que en en las siguientes clases entenderás a evaluar algoritmos con Big-O, una notación que funciona para todos los tipos de complejidad que existen y que existirán. ¡Te veo allá!
