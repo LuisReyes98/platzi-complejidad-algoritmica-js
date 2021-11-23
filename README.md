@@ -187,8 +187,28 @@ Lo mismo sucede aquí. El Análisis Asintótico es la forma con la que encontram
 
 ## Notación Big-O
 
+[Visualizador grafica de funciones matematicas](https://www.geogebra.org/calculator)
+
 **¿Porque necesitamos una notación?**
 La queremos usar para poder simplificar el analisis de la complejidad computacional
+
+buscamos poder simplificar la representacion de la complejidad
+
+**¿Qué buscamos con Big-O?**
+Buscamos descrubrir una **función** (constante, lineal, polinomial, logaritmica o exponencial) que sea **mayor o igual** que la complejidad de un algoritmo.
+
+### Clases de Big-O
+
+| Clase     | Crecimiento | Formula     | Emoji |
+| --------- | ----------- | ----------- | ----- |
+| O(1)      | Constante   | $f(x) = 1 $ | 😊     |
+| O(log(n)) | Logarítmico | $f(x) = \log_{10}(x) $ | 🙂     |
+| O(n)      | Lineal      | $f(x) = x $ | 😶     |
+| O($n^2$)  | Cuadrático  | $f(x) = x^2 $ | 🙁     |
+| O($2^n$)  | Exponencial | $f(x) = 2^x $ | 😢     |
+| O(n!)     | Factorial   | $f(x) = x! $ | 😭     |
+
+### notas
 
 ☣ Somos seres precavidos. Cuando asistimos a un viaje, podemos llevar más dinero de la cuenta. Por si algo sucede mal.
 Resultado de esto:
