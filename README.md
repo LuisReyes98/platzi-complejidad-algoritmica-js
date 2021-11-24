@@ -190,12 +190,12 @@ Lo mismo sucede aquí. El Análisis Asintótico es la forma con la que encontram
 [Visualizador grafica de funciones matematicas](https://www.geogebra.org/calculator)
 
 **¿Porque necesitamos una notación?**
-La queremos usar para poder simplificar el analisis de la complejidad computacional
+La queremos usar para poder simplificar el análisis de la complejidad computacional
 
-buscamos poder simplificar la representacion de la complejidad
+buscamos poder simplificar la representación de la complejidad
 
 **¿Qué buscamos con Big-O?**
-Buscamos descrubrir una **función** (constante, lineal, polinomial, logaritmica o exponencial) que sea **mayor o igual** que la complejidad de un algoritmo.
+Buscamos descubrir una **función** (constante, lineal, polinomial, logarítmica o exponencial) que sea **mayor o igual** que la complejidad de un algoritmo.
 
 ### Clases de Big-O
 
@@ -224,3 +224,39 @@ Resultado de esto:
 Big-O no contará tanto con las mediciones pequeñas, sino con las mediciones grandes.
 
 👁‍🗨 Mira esta animación, y fíjate cómo el cambiar los puntos superiores determina dónde se traza la línea, que nos indica un O(n).
+
+## Cálculo de la notación Big-O
+
+**Para la complejidad temporal**
+se considera el tiempo de ejecucion de cada instruccion
+
+```javascript
+let bar = 'test'  // O(1)
+if() {} // O(1)
+for() {}  // O(n)
+while() {}  // O(n)
+for() { for() {} }// O(n^2)
+```
+
+**Para la complejidad Espacial**
+se considera el aumento del espacio utilizado con cada instruccion
+
+```js
+let bar = 'test'  // 0(1)
+if () {}               // 0(1)
+for () {}             // 0(1)
+let resultado = [1,2,...,n]  // 0(n)
+let dimensional = [[2,4],[6,8],[10,12]] //0(n^2)
+```
+
+**Simplificar la notación**
+por cuestiones de simplificar la notación de la complejidad se lleva a la expresion del elemento con mayor grado
+
+O(2n) -> O(n)
+O(50) -> O(1)
+O($n^2 + 50$) -> O($n^2)
+
+**El crecimiento importa**
+La complejidad de un algoritmo nace de cuantos recursos utiliza el algoritmo a ejecutarse.
+
+La notación Big-O solo se enfoca en el **crecimiento** del algoritmo, no en datos absolutos, ya que el crecimiento nos dice como se comportara el algoritmo a medida que aumenta la complejidad del software y la entrada de datos es cada vez mayor.
