@@ -260,3 +260,6 @@ O($n^2 + 50$) -> O($n^2)
 La complejidad de un algoritmo nace de cuantos recursos utiliza el algoritmo a ejecutarse.
 
 La notación Big-O solo se enfoca en el **crecimiento** del algoritmo, no en datos absolutos, ya que el crecimiento nos dice como se comportara el algoritmo a medida que aumenta la complejidad del software y la entrada de datos es cada vez mayor.
+
+## Evaluación de complejidad temporal con Big-O
+
