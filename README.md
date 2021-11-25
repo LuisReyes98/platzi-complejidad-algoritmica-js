@@ -263,3 +263,72 @@ La notación Big-O solo se enfoca en el **crecimiento** del algoritmo, no en dat
 
 ## Evaluación de complejidad temporal con Big-O
 
+📂 Genial, ahora puedes practicar con más algoritmos desde la carpeta algorithms del repositorio del curso.
+
+🙏 Te invito a hacerlo, pues con esto empleas las reglas para hallar la notación Big-O de varios algoritmos que podrás emplear en entrevistas técnicas.
+
+```js
+/**
+ * Complejidad Temporal -> O( n + 3 ) -> O(n)
+ * Complejidad Espacial -> O(  )
+ * Espacio Auxiliar -> O(  )
+ */
+function linearSearch(arreglo, clave) {
+  for (let indice = 0; indice < arreglo.length; indice++) { // O(n)
+    if (arreglo[indice] === clave) { // O(1)
+      return indice; // O(1)
+    }
+  }
+  return -1; // O(1)
+}
+```
+
+```js
+/**
+ * Complejidad Temporal -> O( 1 + n * n + 1 + 1 + 1 + 1 + 1 ) -> O(n^2 +6) -> O(n^2)
+ * Complejidad Espacial -> O(  )
+ * Espacio Auxiliar -> O(  )
+ */
+function bubbleSort(arreglo) {
+  let longitud = arreglo.length; // O(1)
+  for (let i = 0; i < longitud; i++) { // O(n)
+    for (let j = 0; j < longitud; j++) { // O(n)
+      if (arreglo[j] > arreglo[j + 1]) { // O(1)
+        let temporal = arreglo[j]; // O(1)
+        arreglo[j] = arreglo[j + 1]; // O(1)
+        arreglo[j + 1] = temporal; // O(1)
+      }
+    }
+  }
+  return arreglo; // O(1)
+}
+```
+
+```js
+/**
+ * Complejidad Temporal -> O( n^2 )
+ * Complejidad Espacial -> O(  )
+ * Espacio Auxiliar -> O(  )
+ */
+function selectionSort(arreglo) {
+  let longitud = arreglo.length; // O(1)
+
+  for (let i = 0; i < longitud; i++) { // O(n)
+    let minimo = i; // O(1)
+    for (let j = i + 1; j < longitud; j++) { // O(n)
+      if (arreglo[j] < arreglo[minimo]) { // O(1)
+        minimo = j; // O(1)
+      }
+    }
+    if (minimo != i) { // O(1)
+      let temporal = arreglo[i]; // O(1)
+      arreglo[i] = arreglo[minimo]; // O(1)
+      arreglo[minimo] = temporal; // O(1)
+    }
+  }
+  return arreglo; // O(1)
+}
+```
+
+## Evaluación de complejidad espacial con Big-O Avanzado
+
