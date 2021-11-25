@@ -332,3 +332,69 @@ function selectionSort(arreglo) {
 
 ## Evaluación de complejidad espacial con Big-O Avanzado
 
+En la complejidad espacial el Espacio Auxiliar es el utilizado por el algoritmo sin considerar el tamaño de los datos de entrada
+
+```js
+/**
+ * Complejidad Temporal -> O( n + 3 ) -> O(n)
+ * Complejidad Espacial -> O( n + 1 ) -> O(n)
+ * Espacio Auxiliar = Complejidad Espacial - Espacio de entrada
+ * Espacio Auxiliar = Complejidad Espacial sin el Espacio de entrada
+ * Espacio Auxiliar -> O( 1 )
+ */
+function linearSearch(arreglo, clave) { // O(n), O(1)
+  for (let indice = 0; indice < arreglo.length; indice++) { // O(1)
+    if (arreglo[indice] === clave) {
+      return indice;
+    }
+  }
+  return -1;
+}
+```
+
+```js
+/**
+ * Complejidad Temporal -> O( 1 + n * n + 1 + 1 + 1 + 1 + 1 ) -> O(n^2 +6) -> O(n^2)
+ * Complejidad Espacial -> O( n +4 ) -> O(n)
+ * Espacio Auxiliar -> O( 4 )  -> O(1)
+ */
+function bubbleSort(arreglo) { // O(n)
+  let longitud = arreglo.length; // O(1)
+  for (let i = 0; i < longitud; i++) { // O(1)
+    for (let j = 0; j < longitud; j++) { // O(1)
+      if (arreglo[j] > arreglo[j + 1]) {
+        let temporal = arreglo[j]; // O(1)
+        arreglo[j] = arreglo[j + 1];
+        arreglo[j + 1] = temporal;
+      }
+    }
+  }
+  return arreglo;
+}
+```
+
+```js
+/**
+ * Complejidad Temporal -> O( n^2 )
+ * Complejidad Espacial -> O( n+5 ) -> O(n)
+ * Espacio Auxiliar -> O( 5 ) -> O(1)
+ */
+function selectionSort(arreglo) { // O(n)
+  let longitud = arreglo.length; // O(1)
+
+  for (let i = 0; i < longitud; i++) { // O(1)
+    let minimo = i; // O(1)
+    for (let j = i + 1; j < longitud; j++) {// O(1)
+      if (arreglo[j] < arreglo[minimo]) {
+        minimo = j;
+      }
+    }
+    if (minimo != i) {
+      let temporal = arreglo[i]; // O(1)
+      arreglo[i] = arreglo[minimo];
+      arreglo[minimo] = temporal;
+    }
+  }
+  return arreglo;
+}
+```
