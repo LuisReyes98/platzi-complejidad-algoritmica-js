@@ -398,3 +398,84 @@ function selectionSort(arreglo) { // O(n)
   return arreglo;
 }
 ```
+
+## Recomendaciones para la evaluación de algoritmos
+
+Al evaluar la complejidad de un algoritmo sabemos que un O(1) es mejor que un O(n), pero si el O(1) toma días en ejecutarse?
+
+**¿El crecimiento simpre importante?**
+No, Hay casos en el que se deben mejorar otras variables del entorno para lograr mejorar los recursos que tiene disponible el algoritmo
+
+**¿Cómo usar correctamente el análisis asintótico?**
+No siempre debe estar fundamentado si es O(1) u O(n), las variables de entorno tienen un peso importante en la eficacia de la ejecucion del algoritmo.
+
+Hey, hasta ahora sabes que un algoritmo con O(1) es mejor que uno con O(n). ¡Genial! Pero, ¿Y si ese algoritmo con O(1) se ejecuta en 1000 horas?
+
+💚 La complejidad algorítmica es importante, pero dónde se ejecuta tu algoritmo determina qué tan importante es.
+
+📉 Cuando la Complejidad Algorítmica deja de ser relevante, es donde debemos mejorar nuestro algoritmo para alcanzar nuestro objetivo de eficiencia.
+
+🚀 **Tal vez tengamos el mejor algoritmo jamás visto, pero si lo ejecutamos en una computadora de hace 20 años con Intel Celeron, pues no podemos esperar mucha rapidez.**
+
+## Notas sobre algoritmos
+
+¡Hola! Esta es la lectura final del Curso de Complejidad Algorítmica. Si ya te sientes preparado puedes directamente pasar el examen, pero si quieres estar seguro/a de que todo está en orden, pues he preparado esta lectura para que repasemos los conceptos que hemos aprendido. 👇
+
+⏲ Cuando esperas a que cargue una aplicación web o cuando una pestaña de un navegador ocupa mucho espacio, estamos consumiendo recursos como tiempo o espacio.
+
+📈 Los algoritmos que se ejecutan al realizar acciones pueden ser medibles en la notación Big-O.
+
+👩‍💻 Para calcular la notación Big-O aplicamos una serie de reglas a través de nuestro código.
+
+### 📏 Reglas para estructuras
+
+Las reglas para Big-O en tiempo son:
+
+![1](./images/1.png)
+
+Las reglas para Big-O en espacio son:
+
+![2](./images/2.png)
+
+Y siempre debemos simplificar la notación:
+
+![3](./images/3.png)
+
+Hasta aquí tenemos todas las conclusiones del curso. Pero recuerda que también ahondamos en el por qué de cada concepto.
+
+### ¿Por qué necesitamos Big-O? ¿Por qué una notación?
+
+Un algoritmo o un programa podrían ejecutarse en cinco o diez horas, incluso si hablamos de una o varias computadoras. Big-O viene a poner orden todo eso, **dándonos una forma fácil de leer en la que podemos determinar la eficiencia de un algoritmo.**
+
+### ¿Por qué asignamos Big-O a cada estructura?
+
+Big-O medirá el recurso generado respecto a la entrada del algoritmo. Y **las estructuras son un aspecto sencillo de convertir en medición de recursos.**
+
+Por ejemplo:
+
+- Con los bucles es sencillo, los bucles repiten instrucciones, y al repetir toman más tiempo en la computadora.
+
+- Con los arreglos es igual, repiten una serie de elementos, y al repetir esos elementos toman más espacio de la computadora.
+
+### ¿Por qué nos quedamos con el grado mayor al simplificar Big-O?
+
+En Big-O queremos comprender qué tanto recurso (como tiempo o espacio) nos gasta un algoritmo cuándo aumentamos los datos. Y **cada grado aumenta a un ritmo totalmente distinto.**
+
+Por ejemplo n crece más que 1000:
+
+![4](./images/4.gif)
+
+No es necesario quedarnos con los grados pequeños: Podemos simplificar y quedarnos con lo importante.
+
+### ¿Solo hay Big-O para espacio y tiempo?
+
+**No**, la complejidad es el estudio de los recursos que utilizan los algoritmos. Estos recursos pueden ser cualquier concepto de hardware y software. Como acceso a la memoria, comparaciones de condiciones, o lo que se necesite limitar.
+
+La buena noticia de esto, es que no se requiere inventar nuevas notaciones. Big-O es suficiente para que personas como tú, desarrolladores/as de software o científicos/as de computación trabajen sobre esto.
+
+### ¡Esto es todo!
+
+Esta lectura fue un resumen de todo lo que hemos encontrado en este curso.
+
+Sin embargo los porqués y cómos nunca se acaban con un campo de estudio tan interesante como el de la complejidad. Así que, no dudes en usar el sistema de preguntas con los temas que hemos tratado aquí, o incluso temas más profundos de la Teoría de la Complejidad si tienes más curiosidad.
+
