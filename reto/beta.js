@@ -1,4 +1,6 @@
-async function algoritmoBeta(payloadId, payloadAPI) {
+import fetch from "node-fetch";
+
+export default async function algoritmoBeta(payloadId, payloadAPI) {
   let arreglosCoinciden = (arreglo1, arreglo2) => {
     if (arreglo1.length != arreglo2.length) {
       return false;

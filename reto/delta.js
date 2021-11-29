@@ -1,4 +1,6 @@
-async function algoritmoDelta(payloadId, payloadAPI) {
+import fetch from "node-fetch";
+
+export default async function algoritmoDelta(payloadId, payloadAPI) {
   let respuesta = await fetch(payloadAPI);
   let data = await respuesta.json();
   let listaDePayloads = [];
