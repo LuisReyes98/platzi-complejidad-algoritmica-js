@@ -4,19 +4,19 @@ import fetch from "node-fetch";
  * Complejidad temporal => O(n+n + n * (1 + n * (1 + 1)) + 1) = O(2n + n^2) = O(n^2)
  *
  * Complejidad Espacial => O( 1 + 1 + x^2 + x + 1 + x + 1) = O(x^2)
- * Espacio Auxiliar => O(x)
+ * Espacio Auxiliar => O(x^2)
  *
  * @param {*} payloadId
  * @param {*} payloadAPI
  * @returns
  */
 export default async function algoritmoAlfa(payloadId, payloadAPI) { // Espacial O(1), O(1)
-  // temporal O(n)
-  // Espacial O(x^2)
+  // temporal O(n) metodo async su tiempo es indeterminado
+  // Espacial O(x^2) son matrices el nivel de complejidad del arreglo de objetos
   let respuesta = await fetch(payloadAPI); // entrada de datos?
 
   // temporal O(n)
-  // Espacial O(x)
+  // Espacial O(x^2) son matrices el nivel de complejidad del arreglo de objetos
   let data = await respuesta.json();
 
   // Temporal O(n)
